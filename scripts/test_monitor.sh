@@ -35,6 +35,6 @@ if pgrep -x "$PROCESS_NAME" > /dev/null; then
     fi
 else
     # Если процесс не запущен, ничего не делаем
-    exit 0
+
 fi
 

@@ -4,4 +4,4 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/ubuntu/var/scripts/monitor_test.sh
+ExecStart=/home/{{ remote_user }}}}/var/scripts/test_monitor.sh

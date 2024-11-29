@@ -4,4 +4,5 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/{{ remote_user }}/var/scripts/monitor_test.sh
+ExecStart=/{{ remote_user }}/var/scripts/test_monitor.sh
+RemainAfterExit=yes
