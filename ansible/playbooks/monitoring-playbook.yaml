@@ -1,0 +1,7 @@
+---
+- name: setup monitoring
+  hosts: monitoring
+  vars:
+    remote_user: "root"
+  roles:
+    - test_monitoring

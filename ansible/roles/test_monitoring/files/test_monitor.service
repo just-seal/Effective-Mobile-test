@@ -1,0 +1,7 @@
+[Unit]
+Description=Monitor the "test" process
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/ubuntu/var/scripts/monitor_test.sh
