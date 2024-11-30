@@ -2,6 +2,6 @@
 - name: setup monitoring
   hosts: monitoring
   vars:
-    remote_user: $REMOTE_USER
+    # remote_user: $REMOTE_USER
   roles:
     - test_monitoring

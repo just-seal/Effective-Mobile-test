@@ -1,32 +1,32 @@
 ---
 - name: Ensure the scripts directory exists
   file:
-    path: "/home/{{ remote_user }}/var/scripts"
+    path: "/home/{{ ansible_user }}/var/scripts"
     state: directory
     mode: '0755'
 
 - name: Ensure the logs directory exists
   file:
-    path: "/home/{{ remote_user }}/var/log"
+    path: "/home/{{ ansible_user }}/var/log"
     state: directory
     mode: '0755'
 
 - name: Ensure the log file exists
   copy:
     content: ""
-    dest: "/home/{{ remote_user }}/var/log/monitor.log"
+    dest: "/home/{{ ansible_user }}/var/log/monitor.log"
     mode: '0644'
 
 - name: Ensure the test_process_status file exists
   copy:
     content: ""
-    dest: "/home/{{ remote_user }}/var/log/test_process_status"
+    dest: "/home/{{ ansible_user }}/var/log/test_process_status"
     mode: '0644'
 
 - name: Copy test_monitor script
   template:
     src: templates/test_monitor.sh.j2
-    dest: /home/{{ remote_user }}/var/scripts/test_monitor.sh
+    dest: /home/{{ ansible_user }}/var/scripts/test_monitor.sh
     mode: '0755'
 
 - name: Deploy the systemd unit

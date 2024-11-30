@@ -1,2 +1,2 @@
 [monitoring]
-$IP ansible_user=$REMOTE_USEr ansible_ssh_private_key_file=$PRIVATE_KEY_FILE
+$IP ansible_user=$REMOTE_USER ansible_ssh_private_key_file=$PRIVATE_KEY_FILE

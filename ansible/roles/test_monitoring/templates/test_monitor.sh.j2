@@ -6,9 +6,9 @@ PROCESS_NAME="test"
   # URL с api процесса
 MONITOR_URL="https://test.com/monitoring/test/api"
   # Файл с логами
-LOG_FILE="/home/{{ remote_user }}/var/log/monitor.log"
+LOG_FILE="/home/{{ ansible_user }}/var/log/monitor.log"
   # Файл для хранения состояния процесса
-PID_FILE="/home/{{ remote_user }}/var/log/test_process_status"
+PID_FILE="/home/{{ ansible_user }}/var/log/test_process_status"
 
 # Функция записи в лог
 log_message() {
